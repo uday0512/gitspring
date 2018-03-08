@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java
-LABEL maintainer="shanem@liatrio.com"
-COPY /target/spring-petclinic-1.5.1.jar /home/spring-petclinic-1.5.1.jar
-CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
+FROM tomcat:9.0-alpine
+LABEL version = "1.1.3"
+COPY /var/lib/jenkins/workspace/dockerpipe/target/petclinic.war /usr/lib/apache-tomcat/apache-tomcat-8.5.28/webapps/petclinic.war
+
