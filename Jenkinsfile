@@ -14,7 +14,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t 36.255.252.200:5000/shanem/spring-petclinic:latest .'
+        sh 'docker build -t shanem/spring-petclinic:latest .'
         sh 'docker push localhost:5000/shanem/spring-petclinic:latest'
       
       }
