@@ -15,8 +15,7 @@ pipeline {
       agent any
       steps {
         sh 'docker build -t 36.255.252.200:5000/shanem/spring-petclinic:latest .'
-        sh 'docker run -p 8089:8089 shanem/spring-petclinic'
-        sh 'docker push 36.255.252.200:5000/shanem/spring-petclinic:latest'
+        sh 'docker push localhost:5000/shanem/spring-petclinic:latest'
       
       }
     }
